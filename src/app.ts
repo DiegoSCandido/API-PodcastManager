@@ -6,7 +6,7 @@ import { HttpMethod } from "./utils/http-methods";
 export const app = async (request: http.IncomingMessage, response:http.ServerResponse) => {
 
     //queryString 
-    const [baserURL, queryString] = request.url?.split("?") ?? ["", ""];
+    const baserURL = request.url?.split("?")[0];
 
 
     // listar podcasts
